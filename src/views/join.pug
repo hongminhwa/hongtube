@@ -1,0 +1,21 @@
+extends base.pug 
+
+
+block content 
+    if errorMessage
+        span=errorMessage
+
+    form(method="POST")
+        input(name="name", type="text", required, placeholder="성명")
+        input(name="email", type="email", required,placeholder="이메일")
+        input(name="username", type="text", required,placeholder="사용자이름")
+        input(name="password", type="password", required,placeholder="비밀번호")
+        input(name="password2", type="password", required,placeholder="비밀번호확인")
+        input(name="location", type="text", required, placeholder="거주지역")
+        input(type="submit", value="회원가입")
+        include partials/social-login
+    div.auth-switch
+        span 계정이있으신가요? 
+        a(href="/login") 기존 계정으로 로그인하세요.  &rarr; 
+            
+  

@@ -1,0 +1,11 @@
+mixin video(video)
+  a(href=`/videos/${video.id}`).video-mixin
+      div.video-mixin_thumb(style=`background-image:url(${"/" + video.thumbUrl});background-size:cover;background-position:center;`)
+      div.video-mixin-data
+          span.video-mixin-title=video.title
+          div.video-mixin-meta 
+              span #{video.owner.name} &nbsp; 
+              span #{video.meta.views}회 
+          br
+          small=video.createdAt
+          hr
