@@ -48,3 +48,41 @@
     //     recorder.stop();    
     // }, 10000);    
         //-   a(href=`/videos/${video.id}`)=video.title
+
+
+        //kakaologin 
+// export const startKakaoLogin = async (req, res) => { 
+//    const baseUrl = "https://kauth.kakao.com/oauth/authorize";
+//    const config = {
+//        client_id: process.env.KAKAO_REST_API_KEY,
+//        redirect_uri: "http://localhost:4000/users/kakao/finish", 
+//        response_type: "code",        
+//    }; 
+//    const params = new URLSearchParams(config).toString();
+//    const finalUrl = `${baseUrl}?${params}`; 
+//    return res.redirect(finalUrl); 
+// };
+
+// export const finishKakaoLogin = async (req, res) => { 
+//    console.log("finsh 단계로들어왔어요 "); 
+//      const baseUrl = "https://kauth.kakao.com/oauth/token"; 
+//      console.log("토큰값은: ", baseUrl);
+//      const config = {
+//        grant_type: "authorization_code", 
+//        client_id: process.env.KAKAO_REST_API_KEY, 
+//        redirect_uri: "http://localhost:4000/users/kakao/finish", 
+//        code: req.query.code, 
+//      };
+     
+   
+// };
+//social login pug 
+
+// div.social-login
+//     a(href="/users/kakao/start").social__btn.social__btn--github
+//         i.fab.fa-github
+//         |  Continue with Kakao &rarr;
+
+// router 
+// userRouter.get("/kakao/start", publicOnlyMiddleware, startKakaoLogin); 
+// userRouter.get("/kakao/finish", publicOnlyMiddleware, finishKakaoLogin); 
